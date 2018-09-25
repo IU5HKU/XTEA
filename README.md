@@ -6,8 +6,8 @@ This is a simple example of use for encipher() and decipher() functions proposed
 
 The file has been compiled under Visual C++ IDE, but can be obviously compiled with everything you want, only things, be careful with this statement:
 
-'''javascript
+```javascript
  typedef unsigned int uint32_t;
-'''
+```
 
 to make the functions work as expected under 64bit environments too.
