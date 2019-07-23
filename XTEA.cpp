@@ -55,10 +55,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	// uint32_t encoded_data[2]={0x93FFFF80,0xFF801CA2};
 	
 	if(argc==5){
-		StrToInt64Ex(argv[1],STIF_SUPPORT_HEX,(LONGLONG*)&key[0]);
-		StrToInt64Ex(argv[2],STIF_SUPPORT_HEX,(LONGLONG*)&key[2]);
-		StrToInt64Ex(argv[3],STIF_SUPPORT_HEX,(LONGLONG*)&lzma_data[0]);
-		numrounds=StrToIntA(argv[4]);
+		key[0]=std::stoi(argv[1],nullptr,0);
+		key[2]=std::stoi(argv[2],nullptr,0);
+		lzma_data[0]=std::stoi(argv[3],nullptr,0);
+		numrounds=std::stoi(argv[4],nullptr,0);
 		
 		//adjust the key endianess
 		tmp=key[1];
