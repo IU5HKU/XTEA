@@ -17,7 +17,7 @@ typedef unsigned int uint32_t;
 //////////////////////////////////////////////////////////////////////////
 /* take 64 bits of data in v[0] and v[1] and 128 bits of key[0] - key[3] */
 /* numrounds usually is 64 but can be 32 as well						 */
-_inline void encipher(unsigned int num_rounds, uint32_t v[2], uint32_t const key[4]) {
+_inline void encipher(const unsigned int num_rounds, uint32_t v[2], uint32_t const key[4]) {
 	unsigned int i;
 	uint32_t v0=v[0], v1=v[1], sum=0, delta=0x9E3779B9;
 	for (i=0; i < num_rounds; i++) {
@@ -29,7 +29,7 @@ _inline void encipher(unsigned int num_rounds, uint32_t v[2], uint32_t const key
 }
 
 //////////////////////////////////////////////////////////////////////////
-_inline void decipher(unsigned int num_rounds, uint32_t v[2], uint32_t const key[4]) {
+_inline void decipher(const unsigned int num_rounds, uint32_t v[2], uint32_t const key[4]) {
 	unsigned int i;
 	uint32_t v0=v[0], v1=v[1], delta=0x9E3779B9, sum=delta*num_rounds;
 	for (i=0; i < num_rounds ; i++) {
