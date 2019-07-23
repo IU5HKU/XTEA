@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <tchar.h>
 #include <Shlwapi.h>
+#include <string>
 
 //this is necessary for using XTEA in 64bit systems
 typedef unsigned int uint32_t;
