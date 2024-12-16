@@ -12,7 +12,7 @@
 #include <Shlwapi.h>
 
 //this is necessary for using XTEA in 64bit systems
-typedef unsigned int uint32_t;
+#include <cstdint>
 
 //////////////////////////////////////////////////////////////////////////
 /* take 64 bits of data in v[0] and v[1] and 128 bits of key[0] - key[3] */
